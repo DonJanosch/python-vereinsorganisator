@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<form method="post">{% csrf_token %}
+    {{ form.as_p|crispy }}
+    <input class="btn-btn-success" type="submit" value="Save">
+</form>
+{% endblock body %}
